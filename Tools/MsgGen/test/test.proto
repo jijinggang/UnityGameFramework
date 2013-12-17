@@ -1,0 +1,19 @@
+import "options.proto";
+
+package pwngs.protocol.accsrv;
+
+// -----------------------------------------
+// 以下为acc消息(msgid为1-999)
+// -----------------------------------------
+
+message CSLogin {
+	option (msgid) = 11;
+	required string name = 1;
+	required string pswd = 2;
+}
+
+message SCLoginResult {
+	option (msgid) = 12;
+	required int32 result = 1;
+	optional string error = 2;
+}

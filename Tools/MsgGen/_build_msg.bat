@@ -1,0 +1,1 @@
+build.bat ../../proto/game.proto ../../Scripts/msg
