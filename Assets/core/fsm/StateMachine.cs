@@ -5,7 +5,7 @@ using System.Text;
 
 namespace core
 {
-    class StateMachine
+    sealed class StateMachine
     {
         private IState _currState;
         private IState _prevState;
