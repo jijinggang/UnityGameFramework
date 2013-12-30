@@ -6,7 +6,6 @@ public class Main : MonoBehaviour
 
     // Use this for initialization
     public static Main Inst = null;
-    private ModuleMgr _moduleMgr = ModuleMgr.Instance();
     void Start()
     {
         Inst = this;
@@ -15,8 +14,8 @@ public class Main : MonoBehaviour
     }
     private void initModules()
     {
-        //_moduleMgr.AddModule(new InputMod());
-        _moduleMgr.Start();
+		//ModuleMgr.Ins.AddModule(new InputMod());
+        ModuleMgr.Inst.Start();
     }
     // Update is called once per frame
     void Update()
@@ -26,10 +25,10 @@ public class Main : MonoBehaviour
             Application.Quit();
             return;
         }
-        _moduleMgr.Update();
+		ModuleMgr.Inst.Update();
     }
     void OnApplicationQuit()
     {
-        //_moduleMgr.OnQuit();
+		ModuleMgr.Inst.Dispose();
     }
 }

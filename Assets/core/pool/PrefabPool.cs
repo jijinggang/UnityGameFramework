@@ -6,18 +6,8 @@ using UnityEngine;
 using System.Collections;
 namespace core
 {
-    public sealed class PrefabPool
+    public sealed class PrefabPool : Singleton<PrefabPool>
     {
-        private static PrefabPool _instance = null;
-        public static PrefabPool Inst
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new PrefabPool();
-                return _instance;
-            }
-        }
 
         private Dictionary<Component, Queue<Component>> _prefab2objects = new Dictionary<Component, Queue<Component>>(); 
         private Dictionary<Component, Component> _object2prefab = new Dictionary<Component, Component>();

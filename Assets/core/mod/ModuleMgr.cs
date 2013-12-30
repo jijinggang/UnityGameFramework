@@ -4,17 +4,18 @@ using System;
 using System.Collections.Generic;
 namespace core
 {
-    public class ModuleMgr : IModule
+	public sealed class ModuleMgr : IModule
     {
         private ModuleMgr()
         {
         }
-        public static ModuleMgr Instance()
-        {
-            if (_inst == null)
-                _inst = new ModuleMgr();
-            return _inst;
-        }
+		public static ModuleMgr Inst{
+			get{
+				if(_inst == null)
+					_inst = new ModuleMgr();
+				return _inst;
+			}
+		}
         public void AddModule(IModule mod)
         {
             mods.Add(mod);

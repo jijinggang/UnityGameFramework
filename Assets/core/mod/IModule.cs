@@ -2,7 +2,7 @@
 using System;
 namespace core
 {
-    public class IModule
+    public abstract class IModule
     {
         public virtual void Start() { }
         public virtual void Update() { }
