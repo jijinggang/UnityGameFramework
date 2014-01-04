@@ -5,3 +5,9 @@
 /obj
 /Temp
 /Library
+/UnitTest/bin
+/UnitTest/obj
+/TestResults
+/*.vsmdi
+/*.testsettings
+/*.userprefs

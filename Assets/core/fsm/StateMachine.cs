@@ -5,12 +5,14 @@ using System.Text;
 
 namespace core
 {
-    sealed class StateMachine
+    public sealed class StateMachine
     {
         private IState _currState;
         private IState _prevState;
         public void ChangeState(IState state)
         {
+            if (state == _currState)
+                return;
             _prevState = _currState;
             _currState = state;
             if (_prevState != null)
@@ -29,5 +31,6 @@ namespace core
                 }
             }
         }
+        public IState GetState() { return _currState; }
     }
 }

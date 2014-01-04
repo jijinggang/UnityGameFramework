@@ -5,7 +5,7 @@ using System.Text;
 
 namespace core
 {
-    interface IState
+    public interface IState
     {
         void Enter();
         void Leave();
