@@ -8,7 +8,7 @@ using System.ByteBuffer;
 
 namespace core
 {
-    class TcpClient
+    public sealed class TcpClient
     {
         private Socket _socket = null;
         private bool _ready = false;

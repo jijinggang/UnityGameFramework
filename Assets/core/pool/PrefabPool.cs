@@ -1,6 +1,8 @@
 ﻿//GameObject显示对象池管理
 //未来可以加上定时器来释放长时间不用的对象
 
+#pragma warning disable 3001,3024
+
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;

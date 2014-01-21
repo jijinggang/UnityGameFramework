@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 3001,3024
+
+using UnityEngine;
 using System.Collections.Generic;
 namespace core
 {
@@ -6,7 +8,7 @@ namespace core
     {
         public static T Show<T>(string prefab) where T : Component
         {
-            GameObject obj = GameObject.Instantiate(Resources.Load(prefab), new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
+            GameObject obj = GameObject.Instantiate(Resources.Load(prefab), Vector3.zero, Quaternion.identity) as GameObject;
             return obj.AddComponent<T>();
         }
         public static void Close(GameObject obj)

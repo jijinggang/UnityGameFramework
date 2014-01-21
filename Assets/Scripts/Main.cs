@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 3001,3009
+
+using UnityEngine;
 using System.Collections;
 using core;
 public class Main : MonoBehaviour

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 namespace core
 {
-	public sealed class ModuleMgr : IModule
+	public sealed class ModuleMgr : AbstractModule
     {
         private ModuleMgr()
         {
@@ -31,7 +31,7 @@ namespace core
         {
             foreach (IModule mod in mods)
             {
-                if (mod.Enable)
+                if (mod.IsEnable())
                     mod.Update();
             }
         }
